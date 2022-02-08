@@ -1,11 +1,11 @@
 {
-    "name": "sigrun/ceidg-api",
+    "name": "dominservice/ceidg-api",
     "description": "PHP CEIDG API library",
     "type": "library",
     "require": {
-        "php": ">=7.2",
-        "ext-soap": "^7.2",
-        "ext-SimpleXML": "^7.2"
+        "php": ">=7.3",
+        "ext-soap": "^7|^8",
+        "ext-SimpleXML": "^7|^8"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.4@dev",
@@ -17,19 +17,19 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Marek Ognicki",
-            "email": "marek@sigrun.eu"
+            "name": "DSO-IT Mateusz Domin",
+            "email": "biuro@dso.biz.pl"
         }
     ],
     "minimum-stability": "dev",
     "autoload":{
       "psr-4": {
-        "CeidgApi\\": "src/"
+        "Dominservice\\": "src/"
       }
     },
     "autoload-dev": {
       "psr-4": {
-        "CeidgApi\\Tests\\": "tests/"
+        "Dominservice\\Tests\\": "tests/"
       }
     }
 }

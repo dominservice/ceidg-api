@@ -1,23 +1,22 @@
 <?php
 
 /*
- * This file is a part of sigrun/ceidg-api package, a PHP library for to deal
+ * This file is a part of dominservice/ceidg-api package, a PHP library for to deal
  * with the CEIDG (https://datastore.ceidg.gov.pl) SOAP webservice.
  *
- * @author Marek Kapusta-Ognicki <marek@sigrun.eu>
- * @author Sigrun Sp. z o.o. <sigrun@sigrun.eu>
- * @copy (C)2019 Sigrun Sp. z o.o. All rights reserved.
+ * @author DSO-IT Mateusz Domin <biuro@dso.biz.pl>
+ * @copy (C)2022 DSO-IT Mateusz Domin All rights reserved.
  */
 
-namespace CeidgApi;
+namespace Dominservice;
 
-use CeidgApi\Contracts\CeidgApiContract;
-use CeidgApi\Contracts\CeidgEnvelopeContract;
-use CeidgApi\Contracts\XmlParserContract;
-use CeidgApi\Envelopes\GetId;
-use CeidgApi\Envelopes\GetMigrationData;
-use CeidgApi\Envelopes\GetMigrationData201901;
-use CeidgApi\Parsers\BaseParser as XmlParser;
+use Dominservice\Contracts\CeidgApiContract;
+use Dominservice\Contracts\CeidgEnvelopeContract;
+use Dominservice\Contracts\XmlParserContract;
+use Dominservice\Envelopes\GetId;
+use Dominservice\Envelopes\GetMigrationData;
+use Dominservice\Envelopes\GetMigrationData201901;
+use Dominservice\Parsers\BaseParser as XmlParser;
 use Exception;
 use SoapClient;
 
@@ -83,7 +82,7 @@ class CeidgApi implements CeidgApiContract
      */
     public function __call($name, $value): CeidgEnvelopeContract
     {
-        $className = '\\CeidgApi\\Envelopes\\'.ucfirst($name);
+        $className = '\\Dominservice\\Envelopes\\'.ucfirst($name);
 
         if (class_exists($className)) {
             return new $className($this);

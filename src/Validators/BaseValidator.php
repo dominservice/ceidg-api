@@ -1,17 +1,16 @@
 <?php
 
 /*
- * This file is a part of sigrun/ceidg-api package, a PHP library for to deal
+ * This file is a part of dominservice/ceidg-api package, a PHP library for to deal
  * with the CEIDG (https://datastore.ceidg.gov.pl) SOAP webservice.
  *
- * @author Marek Kapusta-Ognicki <marek@sigrun.eu>
- * @author Sigrun Sp. z o.o. <sigrun@sigrun.eu>
- * @copy (C)2019 Sigrun Sp. z o.o. All rights reserved.
+ * @author DSO-IT Mateusz Domin <biuro@dso.biz.pl>
+ * @copy (C)2022 DSO-IT Mateusz Domin All rights reserved.
  */
 
-namespace CeidgApi\Validators;
+namespace Dominservice\Validators;
 
-use CeidgApi\Contracts\ValidatorContract;
+use Dominservice\Contracts\ValidatorContract;
 
 abstract class BaseValidator implements ValidatorContract
 {
@@ -24,7 +23,7 @@ abstract class BaseValidator implements ValidatorContract
      */
     public static function getValidator($paramName): ValidatorContract
     {
-        $validatorClassName = '\\CeidgApi\\Validators\\'.$paramName.'Validator';
+        $validatorClassName = '\\Dominservice\\Validators\\'.$paramName.'Validator';
 
         return class_exists($validatorClassName) ? new $validatorClassName() : new EmptyValidator();
     }

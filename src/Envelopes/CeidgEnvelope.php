@@ -1,19 +1,18 @@
 <?php
 
 /*
- * This file is a part of sigrun/ceidg-api package, a PHP library for to deal
+ * This file is a part of dominservice/ceidg-api package, a PHP library for to deal
  * with the CEIDG (https://datastore.ceidg.gov.pl) SOAP webservice.
  *
- * @author Marek Kapusta-Ognicki <marek@sigrun.eu>
- * @author Sigrun Sp. z o.o. <sigrun@sigrun.eu>
- * @copy (C)2019 Sigrun Sp. z o.o. All rights reserved.
+ * @author DSO-IT Mateusz Domin <biuro@dso.biz.pl>
+ * @copy (C)2022 DSO-IT Mateusz Domin All rights reserved.
  */
 
-namespace CeidgApi\Envelopes;
+namespace Dominservice\Envelopes;
 
-use CeidgApi\Contracts\CeidgApiContract;
-use CeidgApi\Contracts\CeidgEnvelopeContract;
-use CeidgApi\Validators\BaseValidator;
+use Dominservice\Contracts\CeidgApiContract;
+use Dominservice\Contracts\CeidgEnvelopeContract;
+use Dominservice\Validators\BaseValidator;
 use Exception;
 
 class CeidgEnvelope implements CeidgEnvelopeContract
@@ -164,7 +163,8 @@ class CeidgEnvelope implements CeidgEnvelopeContract
      */
     protected function setParam($name, $value): CeidgEnvelopeContract
     {
-        if (\in_array($name, array_keys($this->allowedParams), true)) {
+//        if (\in_array($name, array_keys($this->allowedParams), true)) {
+        if (array_key_exists($name, $this->allowedParams)) {
             $validated = 'single' === $this->allowedParams[$name]
                 ? $this->validate($name, $this->processSingleParam($value))
                 : $this->validate($name, $this->processListParam($value));

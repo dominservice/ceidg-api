@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/sigrundev/ceidg-api.svg?branch=master)](https://travis-ci.org/sigrundev/ceidg-api) [![Coverage Status](https://coveralls.io/repos/github/sigrundev/ceidg-api/badge.svg?branch=master)](https://coveralls.io/github/sigrundev/ceidg-api?branch=master)
-[![StyleCI](https://github.styleci.io/repos/203665408/shield?branch=master)](https://github.styleci.io/repos/203665408)
-[![Maintainability](https://api.codeclimate.com/v1/badges/e2e75fb45810272e7bf0/maintainability)](https://codeclimate.com/github/sigrundev/ceidg-api/maintainability)
+[![Build Status](https://travis-ci.org/dominservice/ceidg-api.svg?branch=master)](https://travis-ci.org/dominservice/ceidg-api) [![Coverage Status](https://coveralls.io/repos/github/dominservice/ceidg-api/badge.svg?branch=master)](https://coveralls.io/github/dominservice/ceidg-api?branch=master)
 
 # PHP CEIDG API library
 We proudly present a PHP library to connect with CEIDG (Polish registry on businesses) API, using SOAP protocol.
@@ -15,7 +13,7 @@ Please refer to the official API documentation, available at the CEIDG system we
 
 As simple as it can be:
 ```bash
-composer require sigrun/ceidg-api
+composer require dominservice/ceidg-api
 ```
 
 ### Declaring API client
@@ -23,7 +21,7 @@ composer require sigrun/ceidg-api
 To declare API client, create new client class, with authorization token and (optionally) sandbox flag as arguments:
 
 ```php
-use CeidgApi\CeidgApi;
+use Dominservice\CeidgApi;
 
 $authToken = 'secret';
 

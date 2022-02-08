@@ -1,22 +1,21 @@
 <?php
 
 /*
- * This file is a part of sigrun/ceidg-api package, a PHP library for to deal
+ * This file is a part of dominservice/ceidg-api package, a PHP library for to deal
  * with the CEIDG (https://datastore.ceidg.gov.pl) SOAP webservice.
  *
- * @author Marek Kapusta-Ognicki <marek@sigrun.eu>
- * @author Sigrun Sp. z o.o. <sigrun@sigrun.eu>
- * @copy (C)2019 Sigrun Sp. z o.o. All rights reserved.
+ * @author DSO-IT Mateusz Domin <biuro@dso.biz.pl>
+ * @copy (C)2022 DSO-IT Mateusz Domin All rights reserved.
  */
 
-namespace CeidgApi\Tests;
+namespace Dominservice\Tests;
 
-use CeidgApi\CeidgApi;
-use CeidgApi\Contracts\CeidgApiContract;
-use CeidgApi\Contracts\CeidgEnvelopeContract;
-use CeidgApi\Envelopes\CeidgEnvelope;
-use CeidgApi\Envelopes\GetId;
-use CeidgApi\Envelopes\GetMigrationData;
+use Dominservice\CeidgApi;
+use Dominservice\Contracts\CeidgApiContract;
+use Dominservice\Contracts\CeidgEnvelopeContract;
+use Dominservice\Envelopes\CeidgEnvelope;
+use Dominservice\Envelopes\GetId;
+use Dominservice\Envelopes\GetMigrationData;
 use PHPUnit\Framework\TestCase;
 use SoapClient;
 
