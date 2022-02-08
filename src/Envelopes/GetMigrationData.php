@@ -15,7 +15,7 @@ namespace Dominservice\Envelopes;
  *
  * @method self setDateTo(string $date)
  * @method self setDateFrom(string $date)
- * @method self setUniqueId(string ...$args)
+ * @method self setUniqueId(array|string ...$args)
  * @method self setMigrationDateFrom(string $date)
  * @method self setMigrationDateTo(string $date)
  * @method self setNIP(string ...$args)

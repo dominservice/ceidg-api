@@ -163,6 +163,8 @@ class CeidgEnvelope implements CeidgEnvelopeContract
      */
     protected function setParam($name, $value): CeidgEnvelopeContract
     {
+        $validated = false;
+
 //        if (\in_array($name, array_keys($this->allowedParams), true)) {
         if (array_key_exists($name, $this->allowedParams)) {
             $validated = 'single' === $this->allowedParams[$name]
@@ -187,6 +189,9 @@ class CeidgEnvelope implements CeidgEnvelopeContract
      */
     protected function isParamEmpty($name): bool
     {
+        if (!isset($this->params[$name])) {
+            return false;
+        }
         // Param is an array with zero elements
         if (\is_array($this->params[$name]) && 0 === \count($this->params[$name])) {
             return true;
