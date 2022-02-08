@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/dominservice/ceidg-api.svg?branch=master)](https://travis-ci.org/dominservice/ceidg-api) [![Coverage Status](https://coveralls.io/repos/github/dominservice/ceidg-api/badge.svg?branch=master)](https://coveralls.io/github/dominservice/ceidg-api?branch=master)
+[![Latest Version](https://img.shields.io/github/release/dominservice/ceidg-api.svg?style=flat-square)](https://github.com/dominservice/ceidg-api/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/dominservice/ceidg-api.svg?style=flat-square)](https://packagist.org/packages/dominservice/ceidg-api)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 # PHP CEIDG API library
 We proudly present a PHP library to connect with CEIDG (Polish registry on businesses) API, using SOAP protocol.
